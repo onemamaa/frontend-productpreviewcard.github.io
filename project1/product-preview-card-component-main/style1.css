@@ -1,0 +1,113 @@
+/*
+- Desktop: 1440px
+- Dark cyan: hsl(158, 36%, 37%)
+- Very dark blue: hsl(212, 21%, 14%)
+- Dark grayish blue: hsl(228, 12%, 48%)
+- White: hsl(0, 0%, 100%)
+"Montserrat", sans-serif;
+"Fraunces", serif;
+ hsl(30, 38%, 92%);*/
+ @import url("https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&family=Montserrat:ital,wght@0,700;1,500&display=swap");
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+.card-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: hsl(30, 38%, 92%);
+}
+.card{
+   width:600px;
+   display: flex;
+   background-color: white;
+   border-radius: 20px;
+}
+.image{
+    flex:50% 0 0;
+    height: 100%;
+}
+.image img{
+    width: 100%;
+    display: block;
+    border-radius:20px 0 0 20px;
+}
+.card-content{
+    padding:30px;
+}
+.card-subheader{
+    letter-spacing: 5px;
+    color:hsl(228, 12%, 48%);
+    font-weight: 300;
+    font-size: 15px;
+    margin-bottom: 15px;
+}
+.card-header{
+    font-size:40px;
+    line-height: 0.8em;
+    margin-bottom: 25px;
+    color: hsl(212, 21%, 14%);
+}
+.card-desc{
+    color:hsl(228, 12%, 48%);
+    line-height: 1.2em;
+    font-weight: 300;
+    margin-bottom: 20px;
+}
+.price{
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.new-price{
+    font-family:"Fraunces", serif;
+    color:hsl(158, 36%, 37%);
+    padding-right: 25px;
+    font-size:30px;
+}
+.old-price{
+    color:hsl(228, 12%, 48%);
+    font-size: 15px;
+}
+.btn{
+    background-color:hsl(158, 36%, 37%);
+    border: none;
+    width: 200px;
+    height: 35px;
+    border-radius: 5px;
+    padding: 0 10px;
+    color: white;
+    font-size: 15px;
+}
+.btn img{
+    margin-right: 10px;
+}
+.btn:hover{
+    background-color:hsl(158, 36%, 22%); ;
+}
+.image .mobile-img{display: none;}
+
+@media (max-width:600px){
+    .image .mobile-img{
+        display: block;
+    }
+    .image .desktop-img{
+        display: none;
+    }
+    .card{
+        flex-wrap: wrap;
+        width:400px;
+        margin: 10px;
+    }
+
+    .image {
+        flex:100% 0 0;
+    }
+    .image img{
+        border-radius: 20px 20px 0 0;
+    }
+
+}
